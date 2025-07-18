@@ -2,93 +2,124 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zaif Portfolio</title>
-
-    <!-- CSS External Link -->
-    <link rel="stylesheet" href="css/styles.css">
-
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio - Zaif</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
-    <!-- Header Content with Tailwind CSS -->
-    <header class="flex justify-between items-center p-[8px] bg-gray-200">
-        <!-- Logo Icon -->
-        <div class="h-16 w-16 bg-[url(https://picsum.photos/200)] rounded-full bg-center bg-cover"></div>
+<body class="bg-gray-50 text-gray-800 font-sans">
 
-        <nav class="flex">
-            <a class="border rounded-[4px] py-[4px] px-[8px] text-decoration-none" href="#home-page">Home</a>
-            <a class="border rounded-[4px] py-[4px] px-[8px] text-decoration-none" href="#our-profile">Our Profile</a>
-            <a class="border rounded-[4px] py-[4px] px-[8px] text-decoration-none" href="#message-us">Message Us</a>
-        </nav>
-    </header>
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 w-full bg-white shadow z-10">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <div>
+        <img src="assets/logo.jpg" alt="Logo" class="w-10 h-10 object-contain" />
+      </div>
+      <ul class="flex space-x-6">
+        <li><a href="#home" class="hover:text-blue-500">Home</a></li>
+        <li><a href="#about" class="hover:text-blue-500">About</a></li>
+        <li><a href="#projects" class="hover:text-blue-500">Projects</a></li>
+        <li><a href="#contact" class="hover:text-blue-500">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
+  <!-- Sections -->
+<main>
+    <!-- Home Content --> 
+  <section id="home" class="min-h-screen flex items-center justify-center pt-24 relative overflow-hidden">
+    <!-- Artistic Image Decorations -->
+    <img width="100" height="100" src="https://img.icons8.com/quill/100/programming.png" alt="Code Decoration" class="absolute top-10 left-10 w-24 opacity-50 rotate-12" />
+    <img width="100" height="100" src="https://img.icons8.com/quill/100/circuit.png" alt="Laptop Developer" class="absolute bottom-10 right-10 w-32 opacity-20 -rotate-6" />
+    <img width="100" height="100" src="https://img.icons8.com/quill/100/program.png" alt="Tech Icons" class="absolute top-1/3 right-1/4 w-50 opacity-10 animate-spin-slow" />
 
-    <!-- Main Content -->
-    <main>
-        <!-- Home Content -->
-        <section id="home-page">
-            <header>
-                <h1 class="text-2xl font-bold text-center my-4">Welcome <span id="welcome-user">[User]</span> to Our
-                    Website
-                </h1>
-            </header>
+    <div class="text-center">
+      <h1 class="text-4xl font-bold mb-4">Hi, <span id="welcome-user">[User]</span>. Welcome to My Portfolio</h1>
+      <p class="text-lg">I'm Zaif, a passionate Web Developer.</p>
+    </div>
+  </section>
 
-            <div>
-                <p class="text-center">This is the home page content. Here you can find various information about our
-                    services.</p>
+    <!-- About Content -->
+  <section id="about" class="py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-semibold mb-6">About Me</h2>
+        <img src="assets/profile.jpg" alt="Profile Picture" class="w-32 h-32 rounded-full mx-auto mb-4">
+      <p class="text-gray-700">Hi, I’m Huzaifah Hamyu Muzakkir, but most people call me Zaif. I'm a fresh graduate passionate about creating modern web applications. I love to learn and build responsive, accessible websites using HTML, Tailwind CSS, and JavaScript.</p>
+    </div>
+  </section>
 
-                <div class="banner-img"></div>
-            </div>
-        </section>
+    <!-- Project Content -->
+  <section id="projects" class="py-20 bg-gray-100">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-semibold mb-6 text-center">Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-white p-6 rounded shadow">
+          <h3 class="text-xl font-bold mb-2">Project One</h3>
+            <img src="assets/project.jpg" alt="Project One" class="w-full h-48 object-cover mb-4 rounded">
+          <p class="text-gray-600">Description of your project goes here.</p>
+        </div>
+        <div class="bg-white p-6 rounded shadow">
+          <h3 class="text-xl font-bold mb-2">Project Two</h3>
+            <img src="assets/project2.png" alt="Project Two" class="w-full h-48 object-cover mb-4 rounded">
+          <p class="text-gray-600">Description of your second project goes here.</p>
+        </div>
+        <div class="bg-white p-6 rounded shadow">
+          <h3 class="text-xl font-bold mb-2">Project Three</h3>
+            <img src="assets/project3.png" alt="Project Three" class="w-full h-48 object-cover mb-4 rounded">
+          <p class="text-gray-600">Description of your third project goes here.</p>
+      </div>
+        <div class="bg-white p-6 rounded shadow">
+          <h3 class="text-xl font-bold mb-2">Project Four</h3>
+            <img src="assets/project4.png" alt="Project Four" class="w-full h-48 object-cover mb-4 rounded">
+          <p class="text-gray-600">Description of your fourth project goes here.</p>
+        </div>
+    </div>
+  </section>
 
-        <hr />
+    <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-white">
+    <div class="max-w-xl mx-auto px-4">
+      <h2 class="text-3xl font-semibold mb-6 text-center">Contact Me</h2>
+      <form id="contactForm" class="space-y-4">
+        <input type="text" id="name" placeholder="Your Name" class="w-full p-3 border rounded" required />
+        <input type="email" id="email" placeholder="Your Email" class="w-full p-3 border rounded" required />
+        <textarea id="message" rows="5" placeholder="Your Message" class="w-full p-3 border rounded" required></textarea>
+        <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">Send</button>
+      </form>
+      <p id="formMsg" class="mt-4 text-center text-green-600 hidden">Thank you for contacting me!</p>
+    </div>
+  </section>
+</main>
 
-        <!-- Our Profile Content -->
-        <section id="our-profile">
-            <header>
-                <h2 class="text-xl font-semibold text-center my-4">Our Profile</h2>
-            </header>
+  <!-- JavaScript Validation -->
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
 
-            <article>
-                <p class="text-center">We are a team of dedicated professionals committed to providing the best services
-                    possible. Our profile includes our mission, vision, and values.</p>
-            </article>
-        </section>
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      const formMsg = document.getElementById('formMsg');
 
-        <hr />
+      if (name === '' || email === '' || message === '') {
+        alert('Please fill in all fields.');
+        return;
+      }
 
-        <!-- Message Us Content -->
-        <section id="message-us">
-            <header>
-                <h2 class="text-xl font-semibold text-center my-4">Message Us</h2>
-            </header>
+      // Basic email validation
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailPattern.test(email)) {
+        alert('Please enter a valid email address.');
+        return;
+      }
 
-            <form>
-
-                <div class="flex flex-col items-center">
-                    <label for="name-input" class="mb-2">Name:</label>
-                    <input type="text" id="name-input" name="name" class="border rounded p-2 mb-4 w-1/2">
-
-                    <button onclick="validateForm();" type="button"
-                        class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-300">Send
-                        Message</button>
-                </div>
-            </form>
-
-            <div id="message-output" class="text-center mt-4">Result:</div>
-        </section>
-    </main>
-
-    <!-- Footer Content -->
-    <footer>
-        <p class="text-center text-gray-600 py-4">© 2025 Yama Company. All rights reserved.</p>
-    </footer>
-
-    <!-- JavaScript External Link -->
+      // Success
+      formMsg.classList.remove('hidden');
+      document.getElementById('contactForm').reset();
+    });
+  </script>
+   <!-- JavaScript External Link -->
     <script src="js/script.js"></script>
 </body>
 
